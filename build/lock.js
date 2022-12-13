@@ -2,7 +2,7 @@
  * lock v1.0.2
  * 
  * Author: Auth0 <support@auth0.com> (http://auth0.com)
- * Date: 12/13/2022, 11:27:06 AM
+ * Date: 12/13/2022, 1:30:10 PM
  * License: MIT
  * 
  *//******/ (function(modules) { // webpackBootstrap
@@ -477,6 +477,9 @@ var ui = {
   },
   allowShowPassword: function allowShowPassword(m) {
     return tget(m, 'allowShowPassword', getUIAttribute(m, 'allowShowPassword'));
+  },
+  disableCaptchaOnLogin: function disableCaptchaOnLogin(m) {
+    return tget(m, 'disableCaptchaOnLogin', getUIAttribute(m, 'disableCaptchaOnLogin'));
   },
   allowPasswordAutocomplete: function allowPasswordAutocomplete(m) {
     return tget(m, 'allowPasswordAutocomplete', getUIAttribute(m, 'allowPasswordAutocomplete'));
@@ -953,6 +956,9 @@ function overrideOptions(m, opts) {
   }
   if (typeof opts.allowShowPassword === 'boolean') {
     m = tset(m, 'allowShowPassword', opts.allowShowPassword);
+  }
+  if (typeof opts.disableCaptchaOnLogin === 'boolean') {
+    m = tset(m, 'disableCaptchaOnLogin', opts.disableCaptchaOnLogin);
   }
   if (typeof opts.allowPasswordAutocomplete === 'boolean') {
     m = tset(m, 'allowPasswordAutocomplete', opts.allowPasswordAutocomplete);
@@ -26155,7 +26161,7 @@ var LoginPane = function (_React$Component) {
       strictValidation: false
     });
 
-    var captchaPane = __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock) && __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock).get('required') && !__WEBPACK_IMPORTED_MODULE_8__core_index__["ui"].disableCaptchaOnLogin && (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__enterprise__["k" /* isHRDDomain */])(lock, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__database__["a" /* databaseUsernameValue */])(lock)) || !sso) ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__field_captcha_captcha_pane__["a" /* default */], { i18n: i18n, lock: lock, onReload: function onReload() {
+    var captchaPane = __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock) && __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock).get('required') && !__WEBPACK_IMPORTED_MODULE_8__core_index__["ui"].disableCaptchaOnLogin(lock) && (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__enterprise__["k" /* isHRDDomain */])(lock, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__database__["a" /* databaseUsernameValue */])(lock)) || !sso) ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__field_captcha_captcha_pane__["a" /* default */], { i18n: i18n, lock: lock, onReload: function onReload() {
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__captcha__["c" /* swapCaptcha */])(__WEBPACK_IMPORTED_MODULE_8__core_index__["id"](lock), false);
       } }) : null;
 

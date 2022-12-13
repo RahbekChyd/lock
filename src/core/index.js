@@ -265,6 +265,7 @@ export const ui = {
   allowAutocomplete: m => tget(m, 'allowAutocomplete', getUIAttribute(m, 'allowAutocomplete')),
   scrollGlobalMessagesIntoView: lock => getUIAttribute(lock, 'scrollGlobalMessagesIntoView'),
   allowShowPassword: m => tget(m, 'allowShowPassword', getUIAttribute(m, 'allowShowPassword')),
+  disableCaptchaOnLogin: m => tget(m, 'disableCaptchaOnLogin', getUIAttribute(m, 'disableCaptchaOnLogin')),
   allowPasswordAutocomplete: m =>
     tget(m, 'allowPasswordAutocomplete', getUIAttribute(m, 'allowPasswordAutocomplete')),
   forceAutoHeight: m => tget(m, 'forceAutoHeight', getUIAttribute(m, 'forceAutoHeight'))
@@ -670,6 +671,9 @@ export function overrideOptions(m, opts) {
   }
   if (typeof opts.allowShowPassword === 'boolean') {
     m = tset(m, 'allowShowPassword', opts.allowShowPassword);
+  }
+  if (typeof opts.disableCaptchaOnLogin === 'boolean') {
+    m = tset(m, 'disableCaptchaOnLogin', opts.disableCaptchaOnLogin);
   }
   if (typeof opts.allowPasswordAutocomplete === 'boolean') {
     m = tset(m, 'allowPasswordAutocomplete', opts.allowPasswordAutocomplete);
