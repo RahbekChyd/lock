@@ -74,6 +74,7 @@ Object {
     "closable": true,
     "containerID": "auth0-lock-container-id",
     "dict": Object {},
+    "disableCaptchaOnLogin": false,
     "disableWarnings": false,
     "forceAutoHeight": false,
     "hideMainScreenTitle": false,
