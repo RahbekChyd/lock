@@ -63,7 +63,7 @@ export default class LoginPane extends React.Component {
     const captchaPane =
       l.captcha(lock) &&
       l.captcha(lock).get('required') &&
-      (isHRDDomain(lock, databaseUsernameValue(lock)) || !sso) ? (
+      ((isHRDDomain(lock, databaseUsernameValue(lock)) || !sso) && !l.ui.disableCaptchaOnLogin) ? (
         <CaptchaPane i18n={i18n} lock={lock} onReload={() => swapCaptcha(l.id(lock), false)} />
       ) : null;
 
