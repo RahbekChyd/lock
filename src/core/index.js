@@ -217,7 +217,8 @@ function extractUIOptions(id, options) {
       undefined === options.scrollGlobalMessagesIntoView
         ? true
         : !!options.scrollGlobalMessagesIntoView,
-    forceAutoHeight: !!options.forceAutoHeight
+    forceAutoHeight: !!options.forceAutoHeight,
+    disableCaptchaOnLogin: !!options.disableCaptchaOnLogin
   });
 }
 
