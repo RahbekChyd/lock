@@ -1,8 +1,8 @@
 /*!
- * lock v1.0.2
+ * lock v1.0.3
  * 
  * Author: Auth0 <support@auth0.com> (http://auth0.com)
- * Date: 12/13/2022, 1:30:10 PM
+ * Date: 12/13/2022, 2:08:21 PM
  * License: MIT
  * 
  *//******/ (function(modules) { // webpackBootstrap
@@ -7459,7 +7459,7 @@ function assertLanguage(m, language, base) {
 function syncLang(m, language, _cb) {
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__utils_cdn_utils__["a" /* load */])({
     method: 'registerLanguageDictionary',
-    url: __WEBPACK_IMPORTED_MODULE_5__core_index__["languageBaseUrl"](m) + '/js/lock/' + '1.0.2' + '/' + language + '.js',
+    url: __WEBPACK_IMPORTED_MODULE_5__core_index__["languageBaseUrl"](m) + '/js/lock/' + '1.0.3' + '/' + language + '.js',
     check: function check(str) {
       return str && str === language;
     },
@@ -11421,7 +11421,7 @@ function setCaptchaParams(m, params, fields) {
   var captchaConfig = __WEBPACK_IMPORTED_MODULE_0__core_index__["captcha"](m);
   var isCaptchaRequired = captchaConfig && __WEBPACK_IMPORTED_MODULE_0__core_index__["captcha"](m).get('required');
 
-  if (!isCaptchaRequired) {
+  if (!isCaptchaRequired || __WEBPACK_IMPORTED_MODULE_0__core_index__["ui"].disableCaptchaOnLogin(m)) {
     return true;
   }
   var captcha = __WEBPACK_IMPORTED_MODULE_1__field_index__["c" /* getFieldValue */](m, 'captcha');
@@ -19447,7 +19447,7 @@ var Auth0LockPasswordless = function (_Core) {
 /* harmony default export */ __webpack_exports__["a"] = (Auth0LockPasswordless);
 
 
-Auth0LockPasswordless.version = '1.0.2';
+Auth0LockPasswordless.version = '1.0.3';
 
 /***/ }),
 /* 103 */
@@ -27634,7 +27634,7 @@ function trimAuthParams() {
 }
 
 function getVersion() {
-  return '1.0.2';
+  return '1.0.3';
 }
 
 /***/ }),
@@ -29690,7 +29690,7 @@ var Auth0Lock = function (_Core) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (Auth0Lock);
-Auth0Lock.version = '1.0.2';
+Auth0Lock.version = '1.0.3';
 
 // TODO: should we have different telemetry for classic/passwordless?
 // TODO: should we set telemetry info before each request?

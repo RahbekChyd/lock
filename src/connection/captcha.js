@@ -39,7 +39,7 @@ export function setCaptchaParams(m, params, fields) {
   const captchaConfig = l.captcha(m);
   const isCaptchaRequired = captchaConfig && l.captcha(m).get('required');
 
-  if (!isCaptchaRequired) {
+  if (!isCaptchaRequired || l.ui.disableCaptchaOnLogin(m)) {
     return true;
   }
   const captcha = c.getFieldValue(m, 'captcha');
