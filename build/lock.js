@@ -1,8 +1,8 @@
 /*!
- * lock v1.0.0
+ * lock v1.0.2
  * 
  * Author: Auth0 <support@auth0.com> (http://auth0.com)
- * Date: 12/13/2022, 10:16:23 AM
+ * Date: 12/13/2022, 11:27:06 AM
  * License: MIT
  * 
  *//******/ (function(modules) { // webpackBootstrap
@@ -7453,7 +7453,7 @@ function assertLanguage(m, language, base) {
 function syncLang(m, language, _cb) {
   __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8__utils_cdn_utils__["a" /* load */])({
     method: 'registerLanguageDictionary',
-    url: __WEBPACK_IMPORTED_MODULE_5__core_index__["languageBaseUrl"](m) + '/js/lock/' + '1.0.0' + '/' + language + '.js',
+    url: __WEBPACK_IMPORTED_MODULE_5__core_index__["languageBaseUrl"](m) + '/js/lock/' + '1.0.2' + '/' + language + '.js',
     check: function check(str) {
       return str && str === language;
     },
@@ -19441,7 +19441,7 @@ var Auth0LockPasswordless = function (_Core) {
 /* harmony default export */ __webpack_exports__["a"] = (Auth0LockPasswordless);
 
 
-Auth0LockPasswordless.version = '1.0.0';
+Auth0LockPasswordless.version = '1.0.2';
 
 /***/ }),
 /* 103 */
@@ -26155,7 +26155,7 @@ var LoginPane = function (_React$Component) {
       strictValidation: false
     });
 
-    var captchaPane = __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock) && __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock).get('required') && (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__enterprise__["k" /* isHRDDomain */])(lock, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__database__["a" /* databaseUsernameValue */])(lock)) || !sso) && !__WEBPACK_IMPORTED_MODULE_8__core_index__["ui"].disableCaptchaOnLogin ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__field_captcha_captcha_pane__["a" /* default */], { i18n: i18n, lock: lock, onReload: function onReload() {
+    var captchaPane = __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock) && __WEBPACK_IMPORTED_MODULE_8__core_index__["captcha"](lock).get('required') && !__WEBPACK_IMPORTED_MODULE_8__core_index__["ui"].disableCaptchaOnLogin && (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_11__enterprise__["k" /* isHRDDomain */])(lock, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_12__database__["a" /* databaseUsernameValue */])(lock)) || !sso) ? __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__field_captcha_captcha_pane__["a" /* default */], { i18n: i18n, lock: lock, onReload: function onReload() {
         return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__captcha__["c" /* swapCaptcha */])(__WEBPACK_IMPORTED_MODULE_8__core_index__["id"](lock), false);
       } }) : null;
 
@@ -27628,7 +27628,7 @@ function trimAuthParams() {
 }
 
 function getVersion() {
-  return '1.0.0';
+  return '1.0.2';
 }
 
 /***/ }),
@@ -29684,7 +29684,7 @@ var Auth0Lock = function (_Core) {
 
 
 /* harmony default export */ __webpack_exports__["a"] = (Auth0Lock);
-Auth0Lock.version = '1.0.0';
+Auth0Lock.version = '1.0.2';
 
 // TODO: should we have different telemetry for classic/passwordless?
 // TODO: should we set telemetry info before each request?

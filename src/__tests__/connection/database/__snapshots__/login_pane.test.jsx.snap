@@ -27,6 +27,43 @@ exports[`LoginPane hides the captcha for SSO connections 1`] = `
 </div>
 `;
 
+exports[`LoginPane hides the captcha if true from options 1`] = `
+<div>
+  <UsernamePane
+    i18n={Object {}}
+    lock={
+      Immutable.Map {
+        "id": "__lock-id__",
+      }
+    }
+    placeholder=""
+    strictValidation={false}
+    usernameStyle="username"
+    validateFormat={false}
+  />
+  <PasswordPane
+    hidden={false}
+    i18n={Object {}}
+    lock={
+      Immutable.Map {
+        "id": "__lock-id__",
+      }
+    }
+    placeholder=""
+  />
+  <CaptchaPane
+    error={false}
+    i18n={Object {}}
+    lock={
+      Immutable.Map {
+        "id": "__lock-id__",
+      }
+    }
+    onReload={[Function]}
+  />
+</div>
+`;
+
 exports[`LoginPane renders a captcha 1`] = `
 <div>
   <UsernamePane

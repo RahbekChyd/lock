@@ -64,4 +64,16 @@ describe('LoginPane', () => {
 
     expectShallowComponent(<LoginPane {...defaultProps} />).toMatchSnapshot();
   });
+
+  it('hides the captcha if true from options', () => {
+    require('core/index').captcha.mockReturnValue({
+      get() {
+        return true;
+      }
+    });
+
+    const disableCaptcha = Object.assign({ disableCaptchaOnLogin: true }, defaultProps);
+
+    expectShallowComponent(<LoginPane {...disableCaptcha} />).toMatchSnapshot();
+  });
 });
